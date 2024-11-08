@@ -1,0 +1,411 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Sketch&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #c9d6ff;
+    background: linear-gradient(90deg, rgb(238, 52, 52),rgb(57, 245, 57));
+    
+}
+
+.main{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.box{
+    border: 2px solid rgb(140, 0, 255);
+    width: 80vw;
+    height: 80vh;
+    position: relative;
+    border-radius: 40px;
+    background-color: white;
+    box-shadow: 10px 10px 50px black;
+    display: flex;
+}
+
+.formA{
+    min-width: 50%;
+    position: absolute;
+    top: 30%;
+    transform: translateY(-30%);
+    }
+
+.formB{
+    position: absolute;
+    right:1rem;
+    top: 30%;
+    transform: translateY(-30%);
+    min-width: 50%;
+    margin-top: 10px;
+}
+
+.form #sign{
+    font-size: 35px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+
+.socialA{
+    display: flex;
+    margin-left: 9em;
+}
+.socialB{
+    display: flex;
+    position: relative;
+    right: -9rem;
+}
+.socialA a{
+    font-size: 35px;
+    margin: 20px;
+    text-decoration: none;
+    margin-left: 1rem;
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.socialB a{
+    font-size: 35px;
+    margin: 20px;
+    text-decoration: none;
+    margin-left: 1rem;
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.socialA a:hover{
+    transform:scale(1.3) translate(1px);
+    transition: .3s ease-in-out;
+    /* background-color: rgb(66, 65, 65); */
+    color: black;
+}
+.socialB a:hover{
+    transform:scale(1.3) translate(1px);
+    transition: .3s ease-in-out;
+    /* background-color: rgb(66, 65, 65); */
+    color: black;
+}
+
+#emails{
+    font-size: 20px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight:normal;
+}
+
+.inputs{
+        margin-top: 20px;
+        text-align: center;
+        
+}
+.inputs .item{
+    margin-bottom: 20px;
+    border-style: none;
+    color: black;
+    padding: 20px 20px;
+    font-size:25px ;
+    width: 400px;
+    height: 45px;
+    border-radius: 10px;
+    border:2px solid rgb(140, 0, 255);
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight:normal;
+    background: rgb(241, 240, 240);
+    outline: none;
+}
+
+p{
+    text-align: center;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight:normal;
+}
+
+.button{
+    text-align: center;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+}
+
+.button button{
+    padding: 12px 32px;
+    background: rgb(140, 0, 255);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgb(140, 0, 255);
+    font-size: 18px;
+    color: #060606;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.moving{
+    width: 50%;
+    height: 100%;
+    background-color: red;
+    background-color: rgb(140, 0, 255);
+    border-radius: 40px 150px 150px 40px;
+    position: absolute;
+    left: -2px;
+    top: 0px;
+    /* z-index: 100; */
+}
+
+
+.moving.signin{
+    animation: movin .5s linear 1 forwards;
+    position: absolute;
+}
+.moving.signup{
+    animation: movup .5s linear 1 forwards;
+    position: absolute;
+}
+
+@keyframes movin{
+    to{
+        left: 51%;
+        border-radius: 150px 40px 40px 150px;
+    }
+}
+@keyframes movup{
+    from{
+        left: 51%;
+        border-radius: 150px 40px 40px 150px;
+    }
+    to{
+        left: -1%;
+        border-radius:40px 150px 150px  40px ;
+    }
+}
+.right{
+    display: none;
+}
+
+.left{
+    display: none;
+}
+
+.right.sign-right{
+
+    position: absolute;
+        right: 10%;
+        transform: translateX(10%);
+        top: 40%;
+        transform: translateY(-40%);
+    display: block;
+
+}
+.left.sign-left{
+
+    position: absolute;
+        left: 10%;
+        transform: translateX(10%);
+        top: 40%;
+        transform: translateY(-40%);
+    display: block;
+
+}
+
+.right.sign-right p{
+    font-size: 18px;
+    font-family: "Poppins", sans-serif; 
+    letter-spacing: 2px;
+    color: white;
+    position: relative;
+    right: -70px;
+}
+.left.sign-left p{
+    font-size: 18px;
+    font-family: "Poppins", sans-serif; 
+    letter-spacing: 2px;
+    color: white;
+    position: relative;
+    left: -2rem;
+    top: 3rem;
+}
+
+.right.sign-right button{
+    padding: 12px 32px;
+    background: rgb(0, 255, 60);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgb(0, 255, 26);
+    font-size: 18px;
+    color: #060606;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 3rem;
+    position: relative;
+    right: -15rem;
+}
+.left.sign-left button{
+    padding: 12px 32px;
+    background: rgb(0, 255, 60);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgb(0, 255, 26);
+    font-size: 18px;
+    color: #060606;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 5rem;
+    position: relative;
+    left: 6rem;
+}
+
+.left.sign-left{
+    display: block;
+}
+
+@media screen and (max-width: 1356px){
+    .right.sign-right p{
+        font-size: 15px;
+        font-family: "Poppins", sans-serif; 
+        letter-spacing: 2px;
+        color: white;
+        position: relative;
+        right: -70px;
+    }
+    .left.sign-left p{
+        font-size: 15px;
+        font-family: "Poppins", sans-serif; 
+        letter-spacing: 2px;
+        color: white;
+        position: relative;
+        left: -2rem;
+        top: 3rem;
+    }
+    .right.sign-right button{
+        right: -13rem;
+    }
+    .left.sign-left button{
+        left: 4rem;
+    }
+    
+}
+
+@media screen and (max-width: 1215px){
+    .socialA{
+        margin-left: 4rem;
+    }
+    .socialB{
+        right: -4rem;
+    }
+}
+
+@media screen and (max-width: 1131px){
+    .socialA a{
+        font-size: 30px;
+        width: 40px;
+        height: 40px;
+        margin: 20px;
+    }
+    .socialB a{
+        font-size: 30px;
+        width: 40px;
+        height: 40px;
+        margin: 20px;
+    }
+    .right.sign-right button{
+        margin-top: 2.5rem;
+        right: -11rem;
+    }
+    .left.sign-left button{
+        margin-top: 4.5rem;
+        left: 3rem;
+    }
+    .right.sign-right p{
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .left.sign-left p{
+        font-size: 12px;
+        font-weight: bold;
+    }
+    #emails{
+        font-size: 17px;
+    }
+    .inputs .item{
+        width: 300px;
+    }
+    
+}
+@media screen and (max-width: 1075px){
+    #pp{
+        width: 300px;
+    }
+    .right.sign-right p{
+        right: -3rem;
+
+    }
+    .right.sign-right button{
+        right: -8rem;
+    }
+}
+
+@media screen and (max-width: 936px){
+    .socialA{
+        margin-left: 3rem;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .box{
+        height: 60vh;
+    }
+    .inputs .item{
+        width: 250px;
+    }
+    .form #sign{
+        font-size: 30px;
+    }
+    
+    .socialA a{
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
+        margin-left: 7px;
+    }
+    .socialB a{
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
+        margin-left: 7px;
+    }
+    #emails{
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+}
