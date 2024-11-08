@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Frequently Asked Questions</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#f9f9f9;
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+}
+
+
+
+.faq-container {
+    max-width: 600px;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color:#ddd;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    background: #007acc;
+    color: #fff;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background: #005fa3;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background: #f9f9f9;
+    padding: 0 15px;
+    font-size: 14px;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+    padding: 15px 0;
+    margin: 0;
+}
+    </style>
+</head>
+<body>
+    <div class="faq-container">
+        <h1>Frequently Asked Questions</h1>
+        
+        <div class="faq-item">
+            <button class="faq-question">What is the purpose of this website?</button>
+            <div class="faq-answer">
+                <p>This website provides educational content about the rain water harvesting process</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <button class="faq-question">How can I learn more about the rain water harvesting </button>
+            <div class="faq-answer">
+                <p>Each section of the website is dedicated to a different  process to save rainwater and use of this process</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <button class="faq-question">Is there a mobile app version available?</button>
+            <div class="faq-answer">
+                <p>Currently, our platform is only available as a website.</p>
+            </div>
+        </div>
+    <div class="faq-item">
+        <button class="faq-question">Why is rainwater harvesting important?</button>
+        <div class="faq-answer">
+            <p>Rainwater harvesting helps reduce dependency on traditional water sources, mitigates urban flooding, and contributes to groundwater recharge. It’s a sustainable way to manage water resources, particularly in areas facing water scarcity or drought.</p>
+        </div>
+    </div>
+    
+    <div class="faq-item">
+        <button class="faq-question">Can harvested rainwater be used for drinking?</button>
+        <div class="faq-answer">
+            <p>Yes, but only if it is properly filtered and treated to meet drinking water standards. This usually involves a multi-stage filtration process to remove contaminants and may include boiling or ultraviolet (UV) treatment.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <button class="faq-question">Is rainwater harvesting legal?</button>
+        <div class="faq-answer">
+            <p>Laws and regulations vary by region. Many places encourage it through incentives, while some have restrictions. Check local guidelines before setting up a system.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <button class="faq-question"> Is rainwater harvesting cost-effective?</button>
+        <div class="faq-answer">
+            <p>Yes, over time, it can significantly reduce water costs. While initial setup costs vary, rainwater harvesting systems often pay for themselves by lowering utility bills and reducing water-related expenses.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <button class="faq-question">Where can rainwater harvesting be used?</button>
+        <div class="faq-answer">
+            <p>Rainwater harvesting can be implemented in homes, schools, farms, commercial buildings, and industrial sites. It’s beneficial in both urban and rural areas, especially in regions prone to water scarcity.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <button class="faq-question">Does rainwater harvesting require a lot of maintenance?</button>
+        <div class="faq-answer">
+            <p>Rainwater harvesting systems require regular maintenance to function effectively. Gutters and pipes should be cleared of debris, storage tanks cleaned periodically, and filters checked and replaced as needed to ensure water quality and system longevity.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <button class="faq-question">How can rainwater harvesting benefit the community?</button>
+        <div class="faq-answer">
+            <p>When practiced widely, rainwater harvesting can reduce the pressure on public water supply, lower the risk of urban flooding, recharge groundwater, and promote a more sustainable use of water resources.</p>
+        </div>
+    </div> 
+    
+    
+    <script>
+        const questions = document.querySelectorAll('.faq-question');
+
+questions.forEach(question => {
+    question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        answer.style.maxHeight = answer.style.maxHeight ? null : `${answer.scrollHeight}px`;
+    });
+});
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
