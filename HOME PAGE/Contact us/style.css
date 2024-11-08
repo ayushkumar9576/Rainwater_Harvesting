@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(23, 22, 27);
+    min-height: 100vh;
+}
+
+
+
+.main-box {
+    width: 98%;
+    height: 720px;
+    background-color: #343148;
+    border-radius: 2rem;
+    position: relative;
+    display: flex;
+
+}
+
+
+
+.left-side {
+    grid-area: a;
+}
+
+.right-side {
+    grid-area: b;
+}
+
+.contact-data {
+    display: grid;
+    grid-template-columns: 752px 752px;
+    grid-template-rows: repeat(1, 720px);
+    grid-template-areas:
+        "a  b";
+}
+
+
+
+
+
+
+
+.contact h2 {
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+.contact form {
+    width: 650px;
+    margin-top: -10px;
+}
+
+form .input-box {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.field{
+    text-align: center;
+}
+
+.input-box .input-field{
+    width: 48%;
+}
+
+.field .item {
+    width: 100%;
+    padding: 25px;
+    background: transparent;
+    border: 3px solid rgb(140, 0, 255);
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #ededed;
+    margin: 12px 0;
+}
+
+.field.error .item{
+    border-color: red;
+}
+
+form .textarea-field .item{
+    resize: none;
+}
+
+.field .error-txt{
+    font-size: 14px;
+    color: red;
+    text-align: left;
+    margin: -5px 0 10px;
+    display: none;
+}
+
+.field.error .error-txt{
+    display: block;
+}
+
+form .textarea-field .error-txt{
+    margin-top: -10px;
+}
+
+form button{
+    padding: 12px 32px;
+    background: rgb(140, 0, 255);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgb(140, 0, 255);
+    font-size: 18px;
+    color: #060606;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+form button:hover{
+    box-shadow: none;
+}
+form button {
+    position: absolute;
+    left: 19.5rem;
+}
+
+.left-side{
+    margin: 0 0 0 0 ;
+    padding-left: 80px;
+}
+
+
+.helping-box{
+    width: 680px;
+    height: 600px;
+    background-color: #e2e3e5;
+    position: relative;
+    /* margin-top: 70px; */
+    margin-left: 72px;
+    border: 4px solid #0ef;
+    border-bottom: 0;
+    border-radius: 1rem 20rem 0 0 ;
+}
+
+.helping-box .para-a{
+    width: 520px;
+    height: 80px;
+    background-color: white;
+    border-radius: 1rem 1rem 1rem 0;
+    position: absolute;
+    bottom: 7rem;
+    left: 4.5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 1.2rem;
+}
+
+.helping-box .para-b{
+    width: 520px;
+    height: 50px;
+    background-color: white;
+    border-radius: 1rem 1rem 1rem 0;
+    position: absolute;
+    bottom: 2.8rem;
+    left: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.type-message{
+    display: flex;
+    width: 680px;
+    background-color: #fff;
+    height: 120px;
+    border-radius: 0 0 1rem 1rem;
+    border: 4px solid #0ef;
+    border-top: 0;
+    position: relative;
+    margin-left: 72px;
+}
+
+
+.type-message .send{
+    border-radius: .8rem;
+    width: 530px;
+    height: 80px;
+    margin-left: 15px;
+    margin-top: 20px;
+    overflow: hidden;
+    resize: none;
+    border: 2px solid black;
+    font-size: 20px;
+    padding: 10px 0 0 5px;
+    scroll-behavior:smooth;
+}
+
+
+
+.type-message button{
+    width: 80px;
+    margin-left: 25px;
+    height: 50px;
+    border-radius: 1rem;
+    font-size: 30px;
+    color: white;
+    background-color: rgb(209, 3, 3);
+    border: none;
+    margin-top: 35px;
+    cursor: pointer;
+}
+
+.type-message button i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.type-message button:hover{
+    background-color: rgb(249, 0, 0);
+}
+
+.para-img img{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+}
+
